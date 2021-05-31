@@ -1,0 +1,41 @@
+.header {
+  background-color: #f0f0f0;
+  height: 100%;
+
+  &__up {
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 10px;
+    background-color: white;
+  }
+
+  &__logo {
+    display: flex;
+    flex-flow: nowrap;
+    align-items: center;
+  }
+
+  &__avt {
+    background-image: url(../../assets/image/HeaderLogo.jpg);
+    background-size: contain;
+    height: 45px;
+    width: 45px;
+  }
+
+  &__text {
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  &__userLink {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  &__item {
+    font-weight: 700;
+    font-size: 15px;
+  }
+}
