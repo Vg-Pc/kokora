@@ -10,8 +10,8 @@
     background-size: cover;
     height: 100%;
     width: 100%;
-    position: absolute;
-    z-index: -5;
+    object-fit: cover;
+    filter: blur(10px);
   }
 
   &__container {

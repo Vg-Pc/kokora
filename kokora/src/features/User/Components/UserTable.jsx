@@ -2,7 +2,7 @@ import React from "react";
 import "antd/dist/antd.css";
 import styled from "styled-components";
 import UserDetail from "../UserDetail";
-import { Table } from "antd";
+import { Table, Spin } from "antd";
 
 const Row22Table = styled(Table)`
   width: 100%;

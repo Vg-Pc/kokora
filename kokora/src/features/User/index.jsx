@@ -9,12 +9,14 @@ import {
   Select,
   Button,
   DatePicker,
+  Spin,
 } from "antd";
 import styled from "styled-components";
 import UserRadio from "./Components/UserRadio";
 import UserTable from "./Components/UserTable";
 import "./user.scss";
 import Header from "Components/Header";
+import UserModal from "./Components/UserModal";
 
 const { Panel } = Collapse;
 const { Search } = Input;
@@ -38,9 +40,6 @@ function callback(key) {
 function User() {
   return (
     <div>
-      {/* <heade>
-        <Header />
-      </heade> */}
       <Row className="user">
         <Col className="user__col1">
           <div className="user__co1Header">
@@ -52,7 +51,6 @@ function User() {
               onChange={callback}
               style={{ width: "100%" }}
             >
-              {/* <div className="user__modalTag"></div> */}
               <Panel header="Loại tài khoản" key="1">
                 <div className="user__listItem">
                   <UserRadio />
@@ -81,7 +79,6 @@ function User() {
               onChange={callback}
               style={{ width: "100%" }}
             >
-              {/* <div className="user__modalTag"></div> */}
               <Panel header="Tỉnh thành" key="1">
                 <div className="user__listItem">
                   <Select
@@ -109,7 +106,7 @@ function User() {
                 />
               </div>
 
-              <Button type="primary">Tạo tài khoản</Button>
+              <UserModal />
             </Row>
           </Affix>
           <Row className="user__row22">

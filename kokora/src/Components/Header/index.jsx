@@ -2,7 +2,13 @@ import React, { useEffect } from "react";
 import "./header.scss";
 import { Row, Col, Menu } from "antd";
 import { Container } from "reactstrap";
-import { BrowserRouter, Route, Switch, useHistory } from "react-router-dom";
+import {
+  BrowserRouter,
+  Route,
+  Switch,
+  useHistory,
+  Link,
+} from "react-router-dom";
 import Product from "../../features/Product";
 import User from "../../features/User";
 import { HeaderMenu } from "./StyleHeader";
@@ -26,11 +32,11 @@ const { SubMenu } = Menu;
 // }
 
 function Header(props) {
-  let history = useHistory();
-  const handleClick = (e) => {
-    console.log(e);
-    history.push("/");
-  };
+  // let history = useHistory();
+  // const handleClick = (e) => {
+  //   console.log(e);
+  //   history.push("/");
+  // };
 
   return (
     <>
@@ -63,18 +69,22 @@ function Header(props) {
 
         <Row className="header__down">
           <HeaderMenu
-            onChange={handleClick}
+            // onChange={handleClick}
             triggerSubMenuAction="click"
             mode="horizontal"
           >
             <Menu.Item key="/overview">
-              <PieChartOutlined />
-              Tổng quan
+              <Link to="/over">
+                <PieChartOutlined />
+                Tổng quan
+              </Link>
             </Menu.Item>
 
             <Menu.Item key="/product">
-              <AppstoreOutlined />
-              Sản phẩm
+              <Link to="/product">
+                <AppstoreOutlined />
+                Sản phẩm
+              </Link>
             </Menu.Item>
 
             <Menu.Item key="3">
@@ -98,8 +108,10 @@ function Header(props) {
             </Menu.Item>
 
             <Menu.Item key="/user">
-              <AuditOutlined />
-              Tài khoản
+              <Link to="/user">
+                <AuditOutlined />
+                Tài khoản
+              </Link>
             </Menu.Item>
           </HeaderMenu>
         </Row>

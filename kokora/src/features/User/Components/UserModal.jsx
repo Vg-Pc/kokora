@@ -1,8 +1,7 @@
 import React, { useState } from "react";
+import { EditButton, ModalButton } from "features/User/StyleUser";
 import "antd/dist/antd.css";
 import { Modal, Button, Form, Input, DatePicker, Select } from "antd";
-import { EditOutlined } from "@ant-design/icons";
-import { EditButton } from "../StyleUser";
 import moment from "moment";
 
 const { Option } = Select;
@@ -15,7 +14,7 @@ const children = [];
 for (let i = 10; i < 36; i++) {
   children.push(<Option key={i.toString(36) + i}>{i.toString(36) + i}</Option>);
 }
-const UserEdit = () => {
+const UseModal = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const showModal = () => {
@@ -63,17 +62,16 @@ const UserEdit = () => {
 
   return (
     <>
-      <EditButton type="text" onClick={showModal}>
-        <EditOutlined />
-        Chỉnh sửa
-      </EditButton>
+      <ModalButton type="primary" onClick={showModal}>
+        Tạo tài khoản
+      </ModalButton>
       <Modal
         title="Thêm nhóm mặt hàng"
         visible={isModalVisible}
         onCancel={handleCancel}
         footer={[
           <Button key="submit" type="primary" onClick={handleOk}>
-            Cập nhật
+            Tạo tài khoản
           </Button>,
         ]}
       >
@@ -86,8 +84,17 @@ const UserEdit = () => {
           onFinish={onFinish}
           onFinishFailed={onFinishFailed}
         >
-          <Form.Item label="Số điện thoại" placeholder="Mã sản phẩm">
-            <Input disabled placeholder="Mã sản phẩm" />
+          <Form.Item
+            label="Email"
+            name="email"
+            rules={[
+              {
+                required: true,
+                message: "Vui lòng nhập",
+              },
+            ]}
+          >
+            <Input placeholder="Nhập email" />
           </Form.Item>
 
           <Form.Item
@@ -104,8 +111,8 @@ const UserEdit = () => {
           </Form.Item>
 
           <Form.Item
-            label="Email"
-            name="unit"
+            label="Số điện thoại"
+            name="numb"
             rules={[
               {
                 required: true,
@@ -113,7 +120,7 @@ const UserEdit = () => {
               },
             ]}
           >
-            <Input placeholder="Nhập email" />
+            <Input placeholder="Nhập số điện thoại" />
           </Form.Item>
 
           <Form.Item
@@ -130,6 +137,14 @@ const UserEdit = () => {
               defaultValue={moment("2015/01/01", dateFormat)}
               format={dateFormat}
             />
+          </Form.Item>
+
+          <Form.Item
+            label="Password"
+            name="password"
+            rules={[{ required: true, message: "Please input your password!" }]}
+          >
+            <Input.Password />
           </Form.Item>
 
           <Form.Item
@@ -173,4 +188,4 @@ const tailLayout = {
   },
 };
 
-export default UserEdit;
+export default UseModal;

@@ -14,11 +14,11 @@ import Header from "Components/Header";
 import User from "features/User";
 
 function Login() {
-  let history = useHistory();
-  const onFinish = (values) => {
-    console.log("Received values of form: ", values);
-    history.push("");
-  };
+  // let history = useHistory();
+  // const onFinish = (values) => {
+  //   console.log("Received values of form: ", values);
+  //   history.push("");
+  // };
   return (
     <div className="login">
       <div className="login__background"></div>
@@ -34,7 +34,7 @@ function Login() {
               username: null,
               password: null,
             }}
-            onFinish={onFinish}
+            // onFinish={onFinish}
           >
             <Form.Item
               name="username"
@@ -79,7 +79,6 @@ function Login() {
                 textAlign: "center",
               }}
             >
-              {/* <BrowserRouter> */}
               <Button
                 type="primary"
                 htmlType="submit"
@@ -89,13 +88,8 @@ function Login() {
                   minWidth: 150,
                 }}
               >
-                {/* <Link to="/header">Đăng nhập</Link> */}
+                <Link to="/main">Đăng nhập</Link>
               </Button>
-
-              {/* <Switch>
-                  <Route path="/header" component={Header} />
-                </Switch>
-              </BrowserRouter> */}
             </Form.Item>
           </Form>
         </div>

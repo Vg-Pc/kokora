@@ -38,11 +38,7 @@ export const DeleteButton = styled(Button)`
   width: 100%;
 `;
 
-export const ModalButton = styled(Button)`
-  padding-left: 275px;
-  position: absolute;
-  margin-top: 10px;
-`;
+export const ModalButton = styled(Button)``;
 
 export const ModalListButton = styled(Button)`
   padding-left: 250px;
