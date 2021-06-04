@@ -15,19 +15,15 @@ import styled from "styled-components";
 import UserRadio from "./Components/UserRadio";
 import UserTable from "./Components/UserTable";
 import "./user.scss";
-import Header from "Components/Header";
+import Header from "components/Header";
 import UserModal from "./Components/UserModal";
+import { PROVINCES } from "utils/constants";
 
 const { Panel } = Collapse;
 const { Search } = Input;
 const { Option } = Select;
 const onSearch = (value) => console.log(value);
 const { RangePicker } = DatePicker;
-
-const children = [];
-for (let i = 10; i < 36; i++) {
-  children.push(<Option key={i.toString(36) + i}>{i.toString(36) + i}</Option>);
-}
 
 function handleChange(value) {
   console.log(`selected ${value}`);
@@ -82,13 +78,14 @@ function User() {
               <Panel header="Tỉnh thành" key="1">
                 <div className="user__listItem">
                   <Select
-                    allowClear
+                    showSearch
                     style={{ width: "100%" }}
                     placeholder="Chọn tỉnh thành"
-                    defaultValue={["a10", "c12"]}
-                    onChange={handleChange}
+                    optionFilterProp="children"
                   >
-                    {children}
+                    {PROVINCES.map((province) => {
+                      return <Option value="1">{province.name}</Option>;
+                    })}
                   </Select>
                 </div>
               </Panel>

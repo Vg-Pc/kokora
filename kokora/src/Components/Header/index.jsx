@@ -32,10 +32,10 @@ const { SubMenu } = Menu;
 // }
 
 function Header(props) {
-  // let history = useHistory();
+  // const history = useHistory();
   // const handleClick = (e) => {
   //   console.log(e);
-  //   history.push("/");
+  //   history.push(e.key);
   // };
 
   return (
@@ -74,14 +74,14 @@ function Header(props) {
             mode="horizontal"
           >
             <Menu.Item key="/overview">
-              <Link to="/over">
+              <Link to="/main/over">
                 <PieChartOutlined />
                 Tổng quan
               </Link>
             </Menu.Item>
 
             <Menu.Item key="/product">
-              <Link to="/product">
+              <Link to="/main/product">
                 <AppstoreOutlined />
                 Sản phẩm
               </Link>
@@ -108,7 +108,7 @@ function Header(props) {
             </Menu.Item>
 
             <Menu.Item key="/user">
-              <Link to="/user">
+              <Link to="/main/user">
                 <AuditOutlined />
                 Tài khoản
               </Link>

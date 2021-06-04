@@ -3,7 +3,7 @@ import { BrowserRouter, Link, Route, Switch, Redirect } from "react-router-dom";
 import { Button, Checkbox, Form, Input } from "antd";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import "./App.scss";
-import Header from "./Components/Header";
+import Header from "./components/Header";
 import Auth from "./features/Auth";
 import "antd/dist/antd.css";
 import {} from "@ant-design/icons";

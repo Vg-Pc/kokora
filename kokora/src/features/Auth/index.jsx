@@ -10,7 +10,7 @@ import {
 import { Button, Checkbox, Form, Input } from "antd";
 import "antd/dist/antd.css";
 import "./auth.scss";
-import Header from "Components/Header";
+import Header from "components/Header";
 import User from "features/User";
 
 function Login() {
@@ -83,10 +83,10 @@ function Login() {
                 type="primary"
                 htmlType="submit"
                 className=" login-form-button"
-                style={{
-                  maxWidth: 200,
-                  minWidth: 150,
-                }}
+                // style={{
+                //   maxWidth: 200,
+                //   minWidth: 150,
+                // }}
               >
                 <Link to="/main">Đăng nhập</Link>
               </Button>

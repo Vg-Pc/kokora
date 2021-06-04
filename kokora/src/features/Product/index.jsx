@@ -5,7 +5,7 @@ import TableProduct from "features/Product/Components/TableProduct/TablePro";
 import ProductModal from "./Components/Modal/ProductModal";
 import ProductModalList from "./Components/Modal/ProductModalList";
 import { Col, Row, Collapse, Affix, List } from "antd";
-import Header from "Components/Header";
+import Header from "components/Header";
 import {
   Row1Collapse,
   SearchInput,

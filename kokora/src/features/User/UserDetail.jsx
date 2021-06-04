@@ -7,24 +7,46 @@ import UserDel from "./Components/UserDel";
 import UserReset from "./Components/UserReset";
 import "./user.scss";
 
-const data = [];
-for (let i = 0; i < 100; i++) {
-  data.push({
-    key: i + 1,
-    name: `name ${i + 1}`,
-    email: `email ${i + 1}`,
-    acctype: `acctype ${i + 1}`,
-    agency: `agency ${i + 1}`,
-    code: `code ${i + 1}`,
-    birth: `birth ${i + 1}`,
-    province: `province ${i + 1}`,
-    create: `create ${i + 1}`,
-    expired: `expired ${i + 1}`,
-    numb: `numb ${i + 1}`,
-    address: `adress ${i + 1}`,
-    sex: `sex ${i + 1}`,
-  });
-}
+// const data = [];
+// for (let i = 0; i < 100; i++) {
+//   data.push({
+//     key: i + 1,
+//     name: `name ${i + 1}`,
+//     email: `email ${i + 1}`,
+//     acctype: `acctype ${i + 1}`,
+//     agency: `agency ${i + 1}`,
+//     code: `code ${i + 1}`,
+//     birth: `birth ${i + 1}`,
+//     province: `province ${i + 1}`,
+//     create: `create ${i + 1}`,
+//     expired: `expired ${i + 1}`,
+//     numb: `numb ${i + 1}`,
+//     address: `adress ${i + 1}`,
+//     sex: `sex ${i + 1}`,
+//   });
+// }
+
+const data = () => {
+  let listdata = [];
+  for (let i = 0; i < 100; i++) {
+    listdata.push({
+      key: i + 1,
+      name: `name ${i + 1}`,
+      email: `email ${i + 1}`,
+      acctype: `acctype ${i + 1}`,
+      agency: `agency ${i + 1}`,
+      code: `code ${i + 1}`,
+      birth: `birth ${i + 1}`,
+      province: `province ${i + 1}`,
+      create: `create ${i + 1}`,
+      expired: `expired ${i + 1}`,
+      numb: `numb ${i + 1}`,
+      address: `adress ${i + 1}`,
+      sex: `sex ${i + 1}`,
+    });
+  }
+  return listdata;
+};
 
 function UserDetail() {
   return (
